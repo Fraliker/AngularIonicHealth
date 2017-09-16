@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "ngx-ionic-health",
+  "short_name": "ngx-ionic-health",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

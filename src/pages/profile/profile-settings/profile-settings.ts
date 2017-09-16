@@ -129,7 +129,7 @@ export class ProfileSettingsPage implements OnInit {
 
   takePicture() {
     console.log('takePicture() is clicked');
-    this.cameraProvider.startCamera();
+    // this.cameraProvider.startCamera();
   }
 
   saveProfileImage() {

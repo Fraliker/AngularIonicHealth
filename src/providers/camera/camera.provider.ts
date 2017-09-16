@@ -31,7 +31,7 @@ export class CameraProvider {
       quality: 85
     }
   }
-
+/*
   startCamera() {
     this.cameraPreview.startCamera(this.cameraOptions)
     .then(
@@ -43,14 +43,14 @@ export class CameraProvider {
       });
   }
 
-  /*
+  
   setHandler() {
     this.cameraPreview.setOnPictureTakenHandler()
     .subscribe((result) => {
       console.log(result);
     });
   }
-  */
+  
 
     
   takePicture() {
@@ -62,7 +62,7 @@ export class CameraProvider {
       this.picture = 'assets/img/test.jpg';
     });
   }
-    
+    */
   switchCamera() {
     this.cameraPreview.switchCamera();
   }
