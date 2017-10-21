@@ -43,7 +43,6 @@ export class CameraProvider {
       });
   }
 
-  
   setHandler() {
     this.cameraPreview.setOnPictureTakenHandler()
     .subscribe((result) => {
@@ -51,8 +50,6 @@ export class CameraProvider {
     });
   }
   
-
-    
   takePicture() {
     this.cameraPreview.takePicture(this.pictureOptions)
     .then((imageData) => {

@@ -13,7 +13,7 @@ export class FollowProvider {
   getFollowers(uid: string) {
     return firebase.database().ref().child(`${this.basePath}/followers`);
   }
-
+ 
   getFollowing(followerId: string, followedId: string) {
     return firebase.database().ref().child(`${this.basePath}/following/${followerId}/${followedId}`);
   }

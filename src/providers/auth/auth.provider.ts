@@ -9,7 +9,7 @@ export class AuthProvider {
   constructor() {
   }
 
-  signInUser(email: string, password: string): firebase.Promise<any> {
+  signInUser(email: string, password: string): Promise<any> {
     return firebase.auth().signInWithEmailAndPassword(email, password)
       .then(
         response => {
@@ -24,7 +24,7 @@ export class AuthProvider {
       );
   }
 
-  signInWithFacebook(): firebase.Promise<any>{
+  signInWithFacebook(): Promise<any>{
     const providerFacebook = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(providerFacebook)
       .then(
@@ -40,7 +40,7 @@ export class AuthProvider {
       });
   }
 
-  signUpUser(email: string, password: string): firebase.Promise<any> {
+  signUpUser(email: string, password: string): Promise<any> {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then( newUser => {
       this.verificationEmail();
@@ -49,11 +49,11 @@ export class AuthProvider {
     });
   }
 
-  verificationEmail(): firebase.Promise<void> {
+  verificationEmail(): Promise<void> {
     return firebase.auth().currentUser.sendEmailVerification();
   }
   
-  resetPassword(email: string): firebase.Promise<void> {
+  resetPassword(email: string): Promise<void> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
